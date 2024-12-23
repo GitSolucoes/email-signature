@@ -62,15 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         telElement.value = tel;
     });
 
-    // Blocks the user from inputting '@'
-    emailElement.addEventListener('input', (event) => {
-        const currentValue = event.target.value;
-        if (currentValue.includes('@')) {
-            event.target.value = currentValue.replace(/@/g, '');
-            alert("Insira somente a primeira parte do seu email!");
-        }
-    });
-
     // Sets the opening of modal when the send-btn is clicked
     sendButton.addEventListener('click', (event) =>{
         event.preventDefault();
@@ -84,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else{
             modalName.textContent = nameElement.options[nameElement.selectedIndex].text;
             modalTel.textContent = telElement.value;
-            modalEmail.textContent = emailElement.value.toLowerCase() + "@solucoesmg.com.br";
+            modalEmail.textContent = emailElement.value.toLowerCase();
             modalPosition.textContent = positionElement.textContent;
 
             modal.style.display = 'flex';
@@ -95,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = 'none';
 
         collaboratorName = nameElement.options[nameElement.selectedIndex].text;
-        collaboratorEmail = emailElement.value.toLowerCase() + "@solucoesmg.com.br";
+        collaboratorEmail = emailElement.value.toLowerCase();
         collaboratorTel = telElement.value;
         collaboratorPosition = positionElement.textContent;
 
