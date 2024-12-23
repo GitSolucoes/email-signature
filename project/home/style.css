@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #0097d6;
+    --secondary-color: #033386;
+    --gray: #e4e4e4;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #ff4848;
+    --dark-red: #bc2222;
+}
+
+body{
+    margin: 0;
+}
+
+.josefin-sans-regular {
+    font-family: "Josefin Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.josefin-sans-bold {
+    font-family: "Josefin Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-regular{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-bold{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inter-regular{
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-bold{
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header{
+    background-color: var(--gray); 
+    height: 8vh;
+    max-height: 100px;
+}
+
+.logo{
+    max-height: 8vh;
+    margin-left: 1%;
+}
+
+.main{
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.form{
+    min-width: 450px;
+    width: 25vw;
+    min-height: 300px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.form-title{
+    margin: 0 0 4% 0
+}
+
+.form>div>div{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+} 
+
+.inputs-container{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form input{
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    width: 50%;
+}
+
+.name{
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    width: 52%
+}
+
+.email{
+    width: 40%;
+}
+
+.email-container p{
+    margin: 0; 
+}
+
+.email-input-container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.position-container p{
+    margin: 0;
+}
+
+.position{
+    width: 80%;
+    color: var(--primary-color);
+}
+
+.btn-send{
+    width: 80%;
+    height: 10%;
+    margin-top: 4%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    transition: .3s;
+}
+
+.btn-send:hover{
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--gray);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    min-width: 400px;
+    width: 450px;
+    min-height: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-info-content strong{
+    color:var(--primary-color)
+}
+
+.modal h2{
+    margin: 6% 0 0 0
+}
+
+.modal button{
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.confirm-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    transition: .3s;
+}
+
+.cancel-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--red);
+    color: var(--white);
+    transition: .3s;
+}
+
+.confirm-btn:hover{
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.cancel-btn:hover{
+    background-color: var(--dark-red);
+    cursor: pointer;
+}

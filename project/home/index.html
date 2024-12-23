@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="section">
+        <header class="header">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczNG7otdygIazkJ1KirI1h0lO61W04QqPDVtE-Cx8AcVG3YOckPJhJSq_YOGS_KDRxueY1r-BZuCUIjLky6vXJGI5hUj5sz0q3kJgNd0aW2MrSbEnpiD8iZ7j-7j898vzV_Gvu2Qlc7fgp3kFIq6ZXov=w672-h473-s-no-gm?authuser=0" alt="Logo Grupo Soluções" class="logo">
+        </header>
+        <main class="main">
+            <h1 class="title josefin-sans-bold" >Crie sua Assinatura de Email</h1>
+    
+            <!--action="send_to_model"   method="post"-->
+            <form class="form poppins-regular">
+                <h3 class="form-title">Insira suas Informações</h3>
+                <div class="inputs-container">
+                    <div class="name-container">
+                        <label for="name"> Nome e Sobrenome: </label>
+                        <select name="names" id="name" class="name">
+                            <option value="" disabled selected>Selecione seu nome...</option>
+                            <option value="alessandra_faria">Alessandra Faria</option>
+                            <option value="anthony_oliveira">Anthony Oliveira</option>
+                            <option value="camila_ataide">Camila Ataíde</option>
+                            <option value="felipe_marchezini">Felipe Marchezini</option>
+                            <option value="geovanna_emanuelly">Geovanna Emanuelly</option>
+                            <option value="gustavo_barbosa">Gustavo Barbosa</option>
+                            <option value="gustavo_inacio">Gustavo Inácio</option>
+                            <option value="ian_henrique">Ian Henrique</option>
+                            <option value="italo_brito">Ítalo Brito</option>
+                            <option value="jessica_hellen">Jéssica Hellen</option>
+                            <option value="joao_fontes">João Fontes</option>
+                            <option value="juan_brito">Juan Brito</option>
+                            <option value="laisa_reis">Laisa Reis</option>
+                            <option value="marta_muniz">Marta Muniz</option>
+                            <option value="rafael_bruce">Rafael Bruce</option>
+                            <option value="rafael_dos_santos">Rafael dos Santos</option>
+                            <option value="raquel_andrade">Raquel Andrade</option>
+                            <option value="rogerio_dias">Rogério Dias</option>
+                            <option value="sabrina_martinuzzo">Sabrina Martinuzzo</option>
+                            <option value="samuel_araujo">Samuel Araújo</option>
+                            <option value="taynara_francine">Taynara Francine</option>
+                            <option value="tiago_martins">Tiago Martins</option>
+                            <option value="vinicius_souza">Vinícius Souza</option>
+                        </select>
+                    </div>
+                    
+                    <div class="tel-container">
+                        <label for="tel"> Telefone Corporativo: </label>
+                        <input type="tel" name="tel" id="tel" class="tel" placeholder="Insira seu telefone">
+                    </div>
+        
+                    <div class="email-container">
+                        <label for="email"> Email: </label>
+                        <div class="email-input-container">
+                            <input type="text" name="email" id="email" class="email" placeholder="Insira seu email">
+                            <p>@solucoesmg.com.br</p>
+                        </div>
+                    </div>
+    
+                    <div class="position-container">
+                        <p>Cargo:</p>
+                        <p class="position" id="position"></p>
+                    </div>
+                </div>
+    
+                <button id="btn-send" class="btn-send">Enviar</button>
+            </form>
+        </main>
+    
+        <footer class="footer poppins-regular">
+            Grupo Soluções © 2024
+        </footer>
+    </section>
+
+    <div id="modal" class="modal poppins-regular">
+        <div class="modal-content">
+            <h2>Confirme suas informações:</h2>
+            <div class="modal-info-content">
+                <p><strong>Nome:</strong> <span id="modal-name"></span><span></span></p>
+                <p><strong>Telefone:</strong> <span id="modal-tel"></span></p>
+                <p><strong>Email:</strong> <span id="modal-email"></span></p>
+                <p><strong>Cargo:</strong> <span id="modal-position"></span></p>
+            </div>
+            
+            <div class="modal-buttons-content">
+                <button id="confirm-btn" class="confirm-btn">Confirmar</button>
+                <button id="cancel-btn" class="cancel-btn">Não Confirmar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
