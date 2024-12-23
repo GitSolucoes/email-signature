@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else{
             modalName.textContent = nameElement.options[nameElement.selectedIndex].text;
             modalTel.textContent = telElement.value;
-            modalEmail.textContent = emailElement.value + "@solucoesmg.com.br";
+            modalEmail.textContent = emailElement.value.toLowerCase() + "@solucoesmg.com.br";
             modalPosition.textContent = positionElement.textContent;
 
             modal.style.display = 'flex';
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = 'none';
 
         collaboratorName = nameElement.options[nameElement.selectedIndex].text;
-        collaboratorEmail = emailElement.value + "@solucoesmg.com.br";
+        collaboratorEmail = emailElement.value.toLowerCase() + "@solucoesmg.com.br";
         collaboratorTel = telElement.value;
         collaboratorPosition = positionElement.textContent;
 
